@@ -1,0 +1,14 @@
+<div>
+    @section('title','تنظیمات درباره ما')
+    <x-admin.form-control  title="تنظیمات "/>
+    <div class="card card-custom gutter-b example example-compact">
+        <div class="card-header">
+            <h3 class="card-title">{{ $header }}</h3>
+        </div>
+        <x-admin.forms.validation-errors/>
+        <div class="card-body">
+            <x-admin.forms.full-text-editor id="aboutUs" label="درباره ما" wire:model.defer="aboutUs"/>
+            <x-admin.forms.basic-text-editor id="footer_about" label="منن پایین فوتر" wire:model="footer_about"/>
+        </div>
+    </div>
+</div>
