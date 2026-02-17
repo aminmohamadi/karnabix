@@ -10,8 +10,10 @@
 
     </div>
 
-    <livewire:site.includes.site.latest-advertise/>
-    <livewire:site.includes.site.latest-articles/>
+{{--    <livewire:site.includes.site.latest-advertise/>--}}
+    <div class="mt-8">
+        <livewire:site.includes.site.latest-articles/>
+    </div>
 
 </div>
 

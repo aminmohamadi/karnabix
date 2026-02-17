@@ -89,8 +89,7 @@
                         class="absolute right-0 top-full opacity-0 invisible transition-all group-hover/categories:opacity-100 group-hover/categories:visible pt-5 z-10">
                         <ul
                             class="flex flex-col relative w-56 min-h-[300px] bg-background border border-border shadow-2xl shadow-black/5">
-
-                            @foreach($categories as $item)
+                            @foreach($categoriesExams as $item)
                                 <li class="group">
                                     <a href="{{ route('exams',['category'=>$item['slug']]) }}"
                                        class="flex items-center relative text-foreground transition-colors hover:text-primary p-3">

@@ -10,6 +10,7 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/bootstrap/app.php
 /storage/app/public/*
 /storage/app/private/*'
 /storage/framework/cache/*

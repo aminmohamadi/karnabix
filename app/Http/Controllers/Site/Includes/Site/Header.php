@@ -23,8 +23,9 @@ class Header extends BaseComponent
         CategoryRepositoryInterface $categoryRepository
     )
     {
-        $this->categories = $categoryRepository->getCategoriesWithTheirSubCategories(CategoryEnum::COURSE,[['parent_id',null]],0);
-        $this->categoriesExams = $categoryRepository->getCategoriesWithTheirSubCategories(CategoryEnum::COURSE,[['parent_id',null]],1);
+        $this->categories = $categoryRepository->getCategoriesWithTheirSubCategories(CategoryEnum::COURSE,[['parent_id','50']],0);
+        $this->categoriesExams = $categoryRepository->getCategoriesWithTheirSubCategories(CategoryEnum::COURSE,[['parent_id','43']],1);
+
         $this->cartContent = Carts::count();
         $this->siteTitle = $settingRepository->getRow("name");
     }

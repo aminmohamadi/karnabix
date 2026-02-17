@@ -28,7 +28,7 @@
         <x-site.client.sidebar-link title=" پیام ها" link="{{ route('user.notifications') }}" icon="la la-bell pr-2" :active="request()->routeIs('user.notifications')" />
         <x-site.client.sidebar-link title=" درخواست همکاری" link="{{ route('user.requests') }}" icon="la la-chalkboard-teacher pr-2" :active="request()->routeIs('user.requests')" />
         <x-site.client.sidebar-link title="پشتیبانی" link="{{ route('user.tickets') }}" icon="la la-support pr-2" :active="request()->routeIs(['user.tickets','user.ticket'])" />
-        <x-site.client.sidebar-link title="آگهی استخدام" link="{{ route('user.advertises') }}" icon="la la-hands pr-2" :active="request()->routeIs(['user.advertises','user.advertises'])" />
+{{--        <x-site.client.sidebar-link title="آگهی استخدام" link="{{ route('user.advertises') }}" icon="la la-hands pr-2" :active="request()->routeIs(['user.advertises','user.advertises'])" />--}}
         <x-site.client.sidebar-link title="انتقال وجه" link="{{ route('user.carts') }}" icon="la la-hands pr-2" :active="request()->routeIs(['user.carts','user.cart'])" />
         <x-site.client.sidebar-link title="خروج" link="{{ route('logout') }}" icon="la la-power-off pr-2" :active="request()->routeIs('logout')" />
     </ul>

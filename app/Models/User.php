@@ -306,7 +306,7 @@ class User extends Authenticatable implements Wallet, Confirmable
             'id'
         )->whereIn('orders.user_id', $this->referrals()->pluck('id'));
     }
-    
+
         public function sentCarts()
     {
         return $this->hasMany(Cart::class, 'sender_id');

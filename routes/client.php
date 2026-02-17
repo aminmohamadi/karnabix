@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::prefix('client')->middleware(['auth'])->group(function (){
+    Route::get('/new',App\Http\Controllers\Client\Dashboard::class);
     Route::get('/dashboard',App\Http\Controllers\Site\Client\Dashboard::class)->name('user.dashboard');
     Route::get('/courses',App\Http\Controllers\Site\Client\Courses::class)->name('user.courses');
     Route::get('/notifications',App\Http\Controllers\Site\Client\Notifications::class)->name('user.notifications');
@@ -39,7 +40,7 @@ Route::prefix('client')->middleware(['auth'])->group(function (){
 
     Route::get('/salePerson',\App\Http\Controllers\Site\Client\SalePerson::class)->name('user.salePerson');
     Route::get('/teacher',\App\Http\Controllers\Site\Client\Teacher::class)->name('user.teacher');
-    
+
         Route::get('/carts',\App\Http\Controllers\Site\Client\Carts::class)->name('user.carts');
     Route::get('/cart/create',\App\Http\Controllers\Site\Client\Cart::class)->name('user.cart');
 });
