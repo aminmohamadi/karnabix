@@ -163,6 +163,7 @@ class StoreCourse extends BaseComponent
         $model->category_id = $this->category;
         $model->quiz_id = $this->quiz;
         $model->teacher_id = $this->teacher;
+        dd($this->teacher);
         $model->status = $this->status;
         $model->const_price = $this->const_price;
         $model->reduction_type = $this->reduction_type;
