@@ -11,7 +11,7 @@
             </svg>
             <h2
                 class="font-black text-2xl text-center text-foreground bg-gradient-to-l from-transparent to-yellow-300 dark:to-yellow-800 py-5 px-8">
-                آکادمی آموزش به ورک</h2>
+                آکادمی آموزش کارنابیکس</h2>
             <div class="flex items-center gap-3 w-40">
                 <span class="block flex-grow h-px bg-border"></span>
                 <span class="w-2 h-2 bg-border rounded-full"></span>
@@ -24,7 +24,7 @@
     </div>
     <div class="max-w-5xl space-y-10 mx-auto">
         <div class="flex flex-col items-center justify-center space-y-3">
-            <p class="font-bold text-sm text-muted">از فعالیت های به ورک برایتان بگوییم</p>
+            <p class="font-bold text-sm text-muted">از فعالیت های کارنابیکس برایتان بگوییم</p>
             <h2 class="font-black text-2xl text-foreground">بخشی از فعالیت های تیم ما</h2>
             <div class="flex items-center gap-3 w-40">
                 <span class="block flex-grow h-px bg-border"></span>

@@ -72,10 +72,6 @@ Route::prefix('sale')->name('sale.')->middleware(['auth','role:sale','sale'])->g
     Route::get('/bank-accounts/{action}/{id?}', App\Http\Controllers\SalePerson\BankAccounts\StoreBankAccount::class)->name('store.bankAccounts');
 });
 
-Route::middleware(['guest'])->group(function (){
-    Route::get('login-password',\App\Http\Controllers\Site\Auth\LoginPassword::class)->name('login-password');
-   
-});
 
 Route::get('config',function(){
     Artisan::call('config:clear');

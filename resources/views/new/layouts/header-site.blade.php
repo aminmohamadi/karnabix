@@ -284,46 +284,10 @@
                         </div>
                     </div>
                 @else
-                    <div class="relative" x-data="{ isOpen: false }">
-                        <button class="flex items-center sm:gap-3 gap-1" x-on:click="isOpen = !isOpen">
-                                <span
-                                    class="inline-flex items-center justify-center w-9 h-9 bg-secondary rounded-full text-foreground">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/>
-                                    </svg>
-                                </span>
-                            <span class="xs:flex flex-col items-start hidden text-xs space-y-1">
-                                    <span
-                                        class="font-semibold text-foreground">ورود / ثبت نام</span>
-
-                                </span>
-                            <span class="text-foreground transition-transform"
-                                  x-bind:class="isOpen ? 'rotate-180' : ''">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                         stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                              d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-                                    </svg>
-                                </span>
-                        </button>
-                        <div class="absolute top-full left-0 pt-3" x-show="isOpen"
-                             x-on:click.outside="isOpen = false">
-                            <div
-                                class="w-56 bg-background border border-border rounded-xl shadow-2xl shadow-black/5 p-3">
-
-                                <a href="{{route('auth')}}"
-                                   class="flex items-center gap-2 w-full text-foreground transition-colors hover:text-primary px-3 py-2">
-                                    <span class="font-semibold text-xs">ورود / ثبت نام</span>
-                                </a>
-                                <a href="{{route('login-password')}}"
-                                   class="flex items-center gap-2 w-full text-foreground transition-colors hover:text-primary px-3 py-2">
-                                    <span class="font-semibold text-xs">ورود با رمز</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="{{route('auth')}}"
+                       class="flex items-center gap-2 w-full text-foreground transition-colors hover:text-primary px-3 py-2">
+                        <span class="font-semibold text-xs">ورود / ثبت نام</span>
+                    </a>
                 @endif
             </div>
         </div>

@@ -5,7 +5,7 @@
 
 <div class="flex flex-col min-h-screen bg-background">
     <!-- header -->
-{{--    @include('new.layouts.header-site')--}}
+    <livewire:site.includes.site.header/>
     <!-- end header -->
 
     <main class="flex-auto py-5">
@@ -23,6 +23,7 @@
     </main>
 
     <!-- footer -->
+    <livewire:site.includes.site.footer/>
 {{--    @include('new.layouts.footer')--}}
     @include('new.layouts.scripts')
     <!-- end footer -->

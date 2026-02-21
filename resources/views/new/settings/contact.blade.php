@@ -2,7 +2,7 @@
     <!-- section:title -->
     <div class="flex flex-col items-start space-y-2">
         <h2 class="font-black text-2xl text-foreground">تمـــــاس باما</h2>
-        <p class="font-semibold text-sm text-muted">در این صفحه میتوانید اطلاعات ارتباطی به ورک را مشاهده
+        <p class="font-semibold text-sm text-muted">در این صفحه میتوانید اطلاعات ارتباطی کارنابیکس را مشاهده
             کنید.</p>
     </div>
     <!-- end section:title -->

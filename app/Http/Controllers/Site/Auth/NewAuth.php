@@ -175,7 +175,6 @@ class NewAuth extends BaseComponent
 
             $this->dispatchBrowserEvent('otp-phase-loaded');
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
             $this->addError("$property", 'خطا در هنگام ارسال رمز');
         }
     }
@@ -213,9 +212,9 @@ class NewAuth extends BaseComponent
         try {
             AuthenticationEvent::dispatch($user);
         } catch (\Exception $e) {
-            Log::error($e->getMessage());
+            $this->addError("user_id", 'خطا در هنگام ارسال رمز');
         }
-        return redirect()->intended(route('home'));
+        return redirect()->route('home');
 
     }
 

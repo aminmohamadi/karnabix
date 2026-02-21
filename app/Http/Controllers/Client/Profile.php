@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Site\Client;
+namespace App\Http\Controllers\Client;
 
 use App\Enums\PaymentEnum;
 use App\Enums\StorageEnum;
@@ -138,10 +138,10 @@ class Profile extends BaseComponent
             $this->data['city'] = $this->settingRepository::getCity($this->province);
 
 
-        return view('site.client.profile',[
+        return view('client.profile',[
                 'max_file_size' => !empty($this->settingRepository->getRow('max_profile_image_size')) ? $this->settingRepository->getRow('max_profile_image_size')  : 2048
             ]
-        )->extends('site.layouts.client.client');
+        )->extends('client.layouts.master');
     }
 
     public function storeProfile()
@@ -285,9 +285,9 @@ class Profile extends BaseComponent
 
     private function verifyCallback( $payment = null , $price = null)
     {
-        
+
         $paymentRepository = app(PaymentRepositoryInterface::class);
-    
+
         if (!is_null($payment) && empty($paymentRepository->get([['payment_ref', $payment->getReferenceId()]])) ) {
             $paymentRepository->update([
                 'payment_ref' => $payment->getReferenceId(),
