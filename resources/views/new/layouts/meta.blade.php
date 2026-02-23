@@ -12,6 +12,7 @@
     {!! JsonLd::generate() !!}
     <link rel="icon" type="image/svg+xml" href="{{asset($logo)}}" />
     <link rel="stylesheet" href="{{asset('assets/css/dependencies/swiper-bundle.min.css')}}" />
+    <link rel="stylesheet" href="{{ asset('admin/css/jdate/persianDatepicker-default.css') }}" />
     <link rel="stylesheet" href="{{asset('assets/css/dependencies/plyr.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/fonts.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/app.css')}}" />

@@ -24,12 +24,7 @@
 
     <!-- footer -->
     <livewire:site.includes.site.footer/>
-{{--    @include('new.layouts.footer')--}}
-    @include('new.layouts.scripts')
-    <!-- end footer -->
 </div>
-
-
 @include('client.layouts.foot')
 </body>
 </html>

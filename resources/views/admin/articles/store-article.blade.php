@@ -1,6 +1,6 @@
 <div>
-    @section('title',' آگهی  ')
-    <x-admin.form-control deleteAble="true" deleteContent="حذف آگهی" mode="{{$mode}}" title="آگهی" />
+    @section('title',' مقاله ')
+    <x-admin.form-control deleteAble="true" deleteContent="حذف مقاله" mode="{{$mode}}" title="مقاله" />
     <div class="card card-custom gutter-b example example-compact">
         <div class="card-header">
             <h3 class="card-title">{{ $header }}</h3>
@@ -8,12 +8,25 @@
         <x-admin.forms.validation-errors/>
         <div class="card-body">
             <div class="row">
+                <x-admin.forms.input with="6" type="text" disabled id="slug" label="نام مستعار" wire:model.defer="slug"/>
+                <x-admin.forms.dropdown with="6" id="category" :data="$data['category']" label="دسته*" wire:model.defer="category"/>
+                <x-admin.forms.input with="6" type="text" id="title" label="عنوان*" wire:model.defer="title"/>
+                <x-admin.forms.dropdown with="6" id="status" :data="$data['status']" label="وضعیت*" wire:model.defer="status"/>
             </div>
             <hr>
             <x-admin.forms.lfm-standalone id="image" label="تصویر" :file="$image" type="image" required="true" wire:model="image"/>
             <x-admin.forms.full-text-editor id="body" label="محتوا*" wire:model.defer="body"/>
             <x-admin.forms.text-area label="کلمات کلیدی*" help="کلمات را با کاما از هم جدا کنید" wire:model.defer="seo_keywords" id="seo_keywords" />
             <x-admin.forms.text-area label="توضیحات سئو*" wire:model.defer="seo_description" id="seo_description" />
+            <x-admin.form-section label="تگ ها">
+                <div class="row">
+                    @foreach($data['tags'] as $key => $value)
+                        <div class="col-3">
+                            <x-admin.forms.checkbox value="{{$key}}" id="{{$key}}tag" label="{{$value}}" wire:model.defer="tags.{{$key}}" />
+                        </div>
+                    @endforeach
+                </div>
+            </x-admin.form-section>
         </div>
     </div>
 </div>
@@ -37,7 +50,7 @@
                             'مقاله مورد نظر با موفقیت حذف شد',
                         )
                     }
-                @this.call('deleteItem', id)
+                    @this.call('deleteItem', id)
                 }
             })
         }

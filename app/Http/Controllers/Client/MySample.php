@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Site\Client;
+namespace App\Http\Controllers\Client;
 
 use App\Http\Controllers\BaseComponent;
 use App\Repositories\Interfaces\HomeworkRepositoryInterface;
