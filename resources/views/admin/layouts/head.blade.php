@@ -18,7 +18,7 @@
 
     <link rel="icon" type="image/png" href="{{ asset($logo) }}">
     <script src="{{asset('admin/js/alpine.min.js')}}" defer></script>
-    <script src="{{asset('admin/js/jquery.min.js')}}" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{{asset('admin/js/jquery.min.js')}}"></script>
     @livewireStyles
 
 
