@@ -36,7 +36,7 @@ class Article extends Model
     {
         return [
             'slug' => [
-                'source' => 'job'
+                'source' => 'title'
             ]
         ];
     }
