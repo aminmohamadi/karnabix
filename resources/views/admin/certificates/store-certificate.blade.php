@@ -12,10 +12,10 @@
                 <x-admin.forms.input with="6" type="text" id="title" label="اموزشگاه *" wire:model.defer="title"/>
             </div>
             <hr>
-            @if($mode == self::UPDATE_MODE)
-                <a class="btn btn-link" href="{{ route('user.certificate',[$demo->id,'status' => 'demo']) }}">مشاهده نمونه</a>
-            <hr>
-            @endif
+{{--            @if($mode == self::UPDATE_MODE)--}}
+{{--                <a class="btn btn-link" href="{{ route('user.certificate',[$demo->id,'status' => 'demo']) }}">مشاهده نمونه</a>--}}
+{{--            <hr>--}}
+{{--            @endif--}}
             <x-admin.forms.lfm-standalone id="logo" label="لوگو" :file="$logo" type="image" required="true" wire:model="logo"/>
             <x-admin.forms.lfm-standalone id="bg_image" label="تصویر پس زمینه" :file="$bg_image" type="image" required="true" wire:model="bg_image"/>
             <x-admin.forms.lfm-standalone id="autograph_image" label="تصویر مهر و امضا" :file="$autograph_image" type="image" required="true" wire:model="autograph_image"/>
