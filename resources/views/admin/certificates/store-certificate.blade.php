@@ -11,7 +11,7 @@
                 <x-admin.forms.input with="6" type="text" id="name" label="عنوان *" wire:model.defer="name"/>
                 <x-admin.forms.input with="6" type="text" id="title" label="اموزشگاه *" wire:model.defer="title"/>
             </div>
-            <hr>
+{{--            <hr>--}}
 {{--            @if($mode == self::UPDATE_MODE)--}}
 {{--                <a class="btn btn-link" href="{{ route('user.certificate',[$demo->id,'status' => 'demo']) }}">مشاهده نمونه</a>--}}
 {{--            <hr>--}}
